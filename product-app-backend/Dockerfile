@@ -20,6 +20,10 @@ WORKDIR /app
 
 # Copy the artifacts (JAR file) from the previous stage into current stage
 COPY --from=build /app/target/*.jar product.jar
+# COPY --from=build /app/target/product-0.0.1-SNAPSHOT.jar product.jar        # in case if upper line throws an error.
+
 
 # Specify the command to run when the container starts - run the Java application using the JAR file
 CMD ["java", "-jar", "product.jar"]
+
+
