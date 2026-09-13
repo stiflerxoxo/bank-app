@@ -50,7 +50,7 @@ networks:
 ###### This was used for backend-app #####
 # services:
 #   mainapp:
-#     image:
+#     image: 265020546803.dkr.ecr.us-east-1.amazonaws.com/backend-app:main
 #     container_name:
 #     ports:
 #       - "8080:8080"
