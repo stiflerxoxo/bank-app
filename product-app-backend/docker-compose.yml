@@ -18,3 +18,39 @@ services:
 networks:
   app_network:
     external: true
+
+
+
+# services:
+#   mysql:
+#     image: mysql:latest
+#     container_name: mysql
+#     environment:
+#       - MYSQL_ROOT_PASSWORD=root@123
+#       - MYSQL_DATABASE=items
+#     volumes:
+#       - ./mysql-data:/var/lib/mysql
+
+#   mainapp:
+#     image: bckend-app:latest
+#     container_name: backend-app
+#     context: 
+#       build: .    
+#     environment:
+#       - SPRING_DATASOURCE_USERNAME: productuser
+#       - SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/items
+#       - SPRING_DATASOURCE_PASSWORD: productpass123
+#     ports:
+#       - "8080:8080"
+#     depends_on:
+#       - mysql
+
+
+
+###### This was used for backend-app #####
+# services:
+#   mainapp:
+#     image:
+#     container_name:
+#     ports:
+#       - "8080:8080"
