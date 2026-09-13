@@ -58,7 +58,7 @@ jobs:
             aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ secrets.ECR_REPOSITORY_URI }}
             
             # Navigate to your deployment folder on the server
-            cd /home/ubuntu/devops-backend-app
+            cd /home/ubuntu/app/devops-backend-app
             
             # Stop the existing services, pull new layers, and bring them back up
             docker-compose up -d
