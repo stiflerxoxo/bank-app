@@ -46,19 +46,19 @@ jobs:
 
 
 
-      # # 5. Connect to your server over SSH and deploy the latest app container
-      # - name: Deploy application
-      #   uses: appleboy/ssh-action@v1.2.0
-      #   with:
-      #     host: ${{ secrets.INSTANCE_IP }}
-      #     username: ubuntu
-      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
-      #     script: |
-      #       # Log into ECR on your remote server using your AWS credentials (FIXED REGION)
-      #       aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ secrets.ECR_REPOSITORY_URI }}
+      # 5. Connect to your server over SSH and deploy the latest app container
+      - name: Deploy application
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.INSTANCE_IP }}
+          username: ubuntu
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # Log into ECR on your remote server using your AWS credentials (FIXED REGION)
+            aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ secrets.ECR_REPOSITORY_URI }}
             
-      #       # Navigate to your deployment folder on the server
-      #       cd /home/ubuntu/devops-backend-app
+            # Navigate to your deployment folder on the server
+            cd /home/ubuntu/devops-backend-app
             
-      #       # Stop the existing services, pull new layers, and bring them back up
-      #       docker-compose up -d
+            # Stop the existing services, pull new layers, and bring them back up
+            docker-compose up -d
