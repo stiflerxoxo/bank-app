@@ -1,4 +1,4 @@
-name: Deploying Backend app.for ECR (Elastic Container Registry)
+name: Deploying Backend app.for ECR (Elastic Container Registry) and RDS
 
 on:
   push:
