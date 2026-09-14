@@ -61,4 +61,4 @@ jobs:
             cd /home/ubuntu/app/devops-backend-app
             
             # Stop the existing services, pull new layers, and bring them back up
-            docker compose up -d
+            docker compose up --force-recreate -d
