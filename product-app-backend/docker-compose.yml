@@ -51,9 +51,16 @@ networks:
 # services:
 #   mainapp:
 #     image: 265020546803.dkr.ecr.us-east-1.amazonaws.com/backend-app:main
-#     container_name:
+#     container_name: "devops-backend-app"
 #     ports:
 #       - "8080:8080"
+#     restart: always
+
+
+#     environment:
+#       SPRING_DATASOURCE_URL: jdbc:mysql://backend-database.cqziqqmi6suf.us-east-1.rds.amazonaws.com:3306/backenddb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+#       SPRING_DATASOURCE_USERNAME: bankuser
+#       SPRING_DATASOURCE_PASSWORD: bankpass123
 
 
 ###### This was used for database (phpmyadmin)#############
